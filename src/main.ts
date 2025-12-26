@@ -114,6 +114,10 @@ const opts = yargs(hideBin(process.argv))
     description: 'set log level of wetty server',
     type: 'string',
   })
+  .option('secret-token', {
+    description: 'Security Token to be added in Headers',
+    type: 'string',
+  })
   .option('help', {
     alias: 'h',
     type: 'boolean',
