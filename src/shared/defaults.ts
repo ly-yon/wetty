@@ -20,6 +20,7 @@ export const serverDefault: Server = {
   host: '0.0.0.0',
   title: process.env.TITLE || 'WeTTY - The Web Terminal Emulator',
   allowIframe: process.env.ALLOWIFRAME === 'true' || false,
+  secret_token: process.env.SECRET_TOKEN || undefined,
 };
 
 export const forceSSHDefault = process.env.FORCESSH === 'true' || false;

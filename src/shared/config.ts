@@ -148,6 +148,7 @@ export function mergeCliConf(opts: Arguments, config: Config): Config {
       port: opts.port,
       title: opts.title,
       allowIframe: opts['allow-iframe'],
+      secret_token: opts['secret-token'],
     }) as Server,
     command: isUndefined(opts.command) ? config.command : `${opts.command}`,
     forceSSH: isUndefined(opts['force-ssh'])

@@ -31,6 +31,7 @@ export interface Server {
   title: string;
   base: string;
   allowIframe: boolean;
+  secret_token: string;
 }
 
 export interface Config {
