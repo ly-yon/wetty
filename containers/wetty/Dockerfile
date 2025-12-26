@@ -1,5 +1,5 @@
 # ---------- Base image ----------
-FROM node:20-alpine as base
+FROM node:20-alpine AS base
 RUN apk add -U build-base python3 py3-setuptools make g++ git
 WORKDIR /usr/src/app
 
@@ -7,6 +7,11 @@ WORKDIR /usr/src/app
 RUN npm install -g pnpm@latest
 
 COPY . /usr/src/app
+# Direct retrieve source code from github --
+# RUN apk add --no-cache git
+# RUN git clone https://github.com/ly-yon/wetty.git .
+
+# RUN apk del git
 
 # ---------- Production dependencies ----------
 FROM base AS prod-deps
